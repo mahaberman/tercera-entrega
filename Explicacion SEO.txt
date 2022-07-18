@@ -1,0 +1,16 @@
+En los diferentes archivos .html sumé el SEO con las siguientes características:
+
+Descripción: mediante la etiqueta meta name description, agregué un parrafó alusivo a la página donde estaba posicionada. Ejemplo:
+
+index: Entre líneas es una suscripción literaria que te acerca los mejores libros a tu casa, paquetes, talleres, novedades literarias y mucho más.
+
+Asociate: Completá el formulario y disfrutar de los beneficios de la comunidad
+
+Experiencias: Suscribite y armá tu propia experiencia literaria o disfrutá en casa de la experiencia creada por un referente del ambiente literario, que incluye un libro, un taller y un regalo para que la experiencia sea total
+
+el siguiente párrafo que explica en pocas palabras el contenido de mi sitio: “Este es el sitio web de mi banda en el que encontrarás fechas, imágenes, videos, música y mucho más"
+
+Palabras clave: mediante la etiqueta meta name keywords, agregué las palabras clave que acompañarán a todas las páginas de mi sitio:experiencia literaria, experiencia ficción, experiencia no ficción, experiencia infantil, experencia personalizada, talleres, regalos, libros, suscripción de libros, especialistas, autores, comunidad, libros en casa, lectura, lectura en casa, descuentos, paquetes, paquetes literarios, generos literarios, membresía, club de lectura
+
+
+

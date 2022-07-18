@@ -1,0 +1,32 @@
+%categoriaLibreria{
+    padding: 32px 0;
+    color: #fff;
+}
+
+%categoriaExperiencias{
+    height: 500px;
+    display: flex; 
+}
+
+%btnComprarLibro{
+    padding: 12px;
+    background-color: #fff;
+    color: white;
+}
+
+.mas-vendidos,
+.novelas,
+.relatos,
+.no_ficcion {
+    @extend %categoriaLibreria;
+}
+
+.experiencia-ficcion,
+.experiencia-infantil,
+.experiencia-noficcion {
+    @extend %categoriaExperiencias;
+}
+
+.libro .libro__comprar{
+    @extend %btnComprarLibro
+}

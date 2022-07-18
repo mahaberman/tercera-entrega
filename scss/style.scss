@@ -1,0 +1,628 @@
+@import 'base/fonts';
+@import 'base/listas';
+@import 'base/general';
+@import 'base/mixins';
+@import 'base/header';
+@import 'base/mapas';
+
+
+main{
+    & .slider{
+        & .carousel{
+
+            & .carousel-caption{
+                font-family: $open-font;
+            }
+        }
+    }
+}
+/*no separe el carousel porque el codigo es muy pequeño como para separar*/
+
+@import 'components/libreria';
+@import 'components/experiencias';
+
+/* PAGINA LIBRERIA  */
+.pagina-libreria {
+    background-color: #946ebf;
+}
+
+.pagina-libreria .contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.mas-vendidos,
+.novelas,
+.relatos,
+.no_ficcion {
+    padding: 32px 0;
+    color: #fff;
+}
+
+/*
+.mas-vendidos .contenedor, .novelas .contenedor, .relatos .contenedor, .no_ficcion .contenedor{
+    display: flex;
+} */
+.mas-vendidos .libro img,
+.novelas .libro img,
+.relatos .libro img,
+.no_ficcion img {
+    width: 100%;
+}
+
+.mas-vendidos .libro,
+.novelas .libro,
+.relatos .libro,
+.no_ficcion .libro {
+    margin-right: 16px;
+}
+
+.mas-vendidos .libro:last-child,
+.novelas .libro:last-child .relatos .libro:last-child .no_ficcion:last-child {
+    margin-right: 0;
+}
+
+.mas-vendidos {
+    background-color: #6EBF8B;
+}
+
+.relatos {
+    background-color: #D82148;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.libro {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.libro .libro__comprar {
+    padding: 12px;
+    color: nth($list: $colores, $n:6 );
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.libro .libro__comprar:hover {
+    transition: all .4s ease;
+    background-color: #D82148;
+    color: #fff;
+}
+
+.pagina-libreria .libro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.libro__hover {
+    position: absolute;
+    background: #dc143c8c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.libro:hover .libro__hover {
+    transform: translateX(0%);
+}
+
+/* PAGINA EXPERIENCIA */
+.seccion-experiencia {
+    background-color: #6EBF8B;
+    padding-top: 32px;
+}
+
+blockquote {
+    text-align: center;
+    margin: 0;
+    padding: 12px;
+}
+
+.seccion-experiencia .contenedor {
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.seccion-experiencia .titulo-seccion {
+    margin: 35px 0 30px 0;
+    text-align: center;
+
+}
+
+.experiencia-text {
+    height: 300px;
+    overflow: scroll;
+}
+
+.experiencia-text p {
+    text-align: justify;
+    padding-left: 25px;
+}
+
+.seccion-experiencia .experiencia-img img {
+    width: 100%;
+}
+
+.experiencia-ficcion,
+.experiencia-infantil,
+.experiencia-noficcion {
+    height: 500px;
+    display: flex;
+}    
+
+/* media para celular para experiencias */
+@media (min-width:0) and (max-width:600px) {
+    .experiencia-ficcion,
+    .experiencia-infantil,
+    .experiencia-noficcion {
+        height: auto;
+    }
+
+    .experiencia-img {
+        width: 80%;
+        padding-bottom: 15px;
+    }
+}
+
+
+.experiencia-ficcion,
+.experiencia-noficcion {
+    margin-top: 25px;
+}
+
+.experiencia-infantil {
+    background-color: nth($list: $colores, $n:4 );
+}
+
+.experiencia-ficcion {
+    background-color: nth($list: $colores, $n:3 )
+}
+
+.experiencia-noficcion {
+    background-color: nth($list: $colores, $n:5 );
+}
+
+.experiencia-img {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 35px;
+}
+
+.experiencia-video {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
+.experiencia-video a {
+    color: nth($list: $colores, $n:6);
+}
+
+.experiencia-video .btn-action {
+    background: nth($list: $colores, $n:8);
+}
+
+.experiencia-video .contenedor {
+    max-width: 750px;
+    height: 450px;
+    background: nth($list: $colores, $n:4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion-formulario {
+    background-color:nth($list: $colores, $n:8);
+    padding: 32px 0;
+}
+
+.seccion-formulario .contenedor {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.seccion-formulario form {
+    width: 400px;
+    margin-right: 48px;
+    text-align: center;
+    background-color:nth($list: $colores, $n:4);
+    color: nth($list: $colores, $n:6);
+    padding: 32px 0;
+}
+
+.seccion-formulario .instrucciones {
+    width: 450px;
+    color: nth($list: $colores, $n:6);
+    padding: 0 32px;
+    background: nth($list: $colores, $n:1 );
+}
+
+.seccion-formulario form div {
+    margin-bottom: 16px;
+}
+
+.seccion-formulario form .btn-buscar {
+    font-weight: bold;
+    color: nth($list: $colores, $n:7);
+}
+
+.seccion-formulario form .input-busqueda {
+    display: block;
+    margin: auto;
+    margin-top: 6px;
+    border: 0;
+    background-color: transparent;
+    color: nth($list: $colores, $n:6);
+    font-size: 14px;
+    border-bottom: 1px solid nth($list: $colores, $n:6);
+}
+
+.seccion-formulario form .btn-confirmar {
+    margin-top: 16px;
+    color: nth($list: $colores, $n:4);
+    background-color: nth($list: $colores, $n:6);
+    padding: 2px 16px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 0;
+}
+
+/* PAGINA ASOCIATE */
+.seccion-form {
+    padding: 32px 0;
+    background-color:nth($list: $colores, $n:8);
+}
+
+.seccion-form .contenedor {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.contenido-form {
+    margin: 0 auto;
+    align-items: center;
+}
+
+.col-form-label {
+    margin-right: 25px;
+}
+
+.form-select {
+    width: 50%;
+    margin-left: 15px;
+}
+
+.form-botones {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 0 0;
+}
+
+.form-botones button {
+    margin-right: 25px;
+}
+
+.img-descriptiva img {
+    width: 80%;
+}
+
+.btn {
+    background-color:nth($list: $colores, $n:4);
+    width: 90px;
+    font-weight: bold;
+}
+
+
+/* PAGINA TALLERES*/
+.talleres {
+    padding: 32px 0;
+    background-color: nth($list: $colores, $n:5);
+    color: nth($list: $colores, $n:6);
+}
+
+.taller {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 32px;
+    border-radius: 20px;
+    background-color: nth($list: $colores, $n:4);
+    color: nth($list: $colores, $n:6);
+    padding: 16px;
+}
+
+
+.taller__video {
+    min-height: 300px;
+}
+
+.taller .btn-pdf {
+    font-weight: bold;
+    color: nth($list: $colores, $n:3 );
+    margin-left: 4px;
+}
+
+.taller .btn-pdf:hover,
+#tallerInvertido .btn-pdf:hover {
+    transition: all 0.4s ease;
+    color: #fff;
+}
+
+#tallerInvertido {
+    background-color: nth($list: $colores, $n:3 );
+}
+
+#tallerInvertido .btn-pdf {
+    color: nth($list: $colores, $n:4);
+}
+
+#tallerInvertido .taller__video {
+    order: -1;
+}
+
+/*PAGINA COMO FUNSIONA*/
+
+.membresia {
+    padding: 32px 0;
+    background-color: nth($list: $colores, $n:4);
+    color: nth($list: $colores, $n:6);
+}
+
+.membresia .contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 50px;
+}
+
+.membresia .membresia-texto:last-child {
+    margin-right: 0;
+    margin-left: 16px;
+}
+
+.membresia .membresia-texto p:first-child {
+    margin-top: 0;
+}
+
+.membresia-img img {
+    width: 100%;
+}
+
+/* PREGUNTAS FRECUENTES */
+.faq {
+    width: 100%;
+    background-color: nth($list: $colores, $n:8);
+    padding: 32px 0;
+    margin: 0 auto;
+    height: 513px;
+}
+
+@media screen and (max-width: 575px) {
+    .faq {
+        height: 600px;
+    }
+}
+
+
+.faq h2 {
+    color:nth($list: $colores, $n:6);
+    text-align: center;
+}
+
+.accordion {
+    margin-top: 25px;
+}
+
+.accordion-item .accordion-body {
+    background-color: nth($list: $colores, $n:4);
+    color: nth($list: $colores, $n:6);
+    font-size: 18px;
+}
+
+.accordion-item .accordion-header .accordion-button {
+    background-color: #946ebf;
+    font-size: 20px;
+    color: nth($list: $colores, $n:7);
+}
+
+
+.pregunta {
+    background: nth($list: $colores, $n:4);
+    padding: 16px;
+    width: 750px;
+    color: nth($list: $colores, $n:6);
+    margin: auto;
+    margin-top: 32px;
+}
+
+.pregunta p:first-child {
+    font-weight: bold;
+    padding: 8px;
+    background-color: nth($list: $colores, $n:1 );
+}
+
+.pregunta a {
+    font-weight: bold;
+    color: nth($list: $colores, $n:6);
+    font-style: italic;
+}
+
+.pregunta a:hover {
+    transition: all 0.4s ease;
+    opacity: .7;
+}
+
+/* PAGINA ASOCIATE */
+.seccion-form .form-group {
+    display: flex;
+    margin: 6px 0;
+    align-items: center;
+}
+
+.seccion-form .form-group label {
+    display: block;
+    min-width: 80px;
+}
+
+.seccion-form .contenedor-intereses {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.seccion-form .contenedor-intereses label {
+    min-width: auto;
+}
+
+/*
+ MEDIA QUERYS
+*/
+@media screen and (max-width: 600px) {
+ 
+    /* INDEX - SECCION LIBRERIA */
+    .libreria .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    /* INDEX - SECCION EXPERIENCIA */
+    .experiencias .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    /* PAGINA LIBRERIA */
+    .pagina-libreria .contenedor {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pagina-libreria .libro__hover {
+        transform: none;
+        justify-content: flex-end;
+    }
+
+    /* PAGINA EXPERIENCIAS */
+    .seccion-experiencia .contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .experiencia-img,
+    .experiencia-text {
+        margin: 0;
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .experiencia-img blockquote {
+        text-align: center;
+    }
+
+    .seccion-formulario .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-formulario form,
+    .seccion-formulario .instrucciones {
+        width: 100%;
+        margin-top: 1rem;
+        box-sizing: border-box;
+        padding: 1rem;
+    }
+
+    /* PAGINA COMO FUNCIONA */
+    .membresia .contenedor {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .membresia .membresia-texto {
+        margin-top: 1rem;
+    }
+
+    /* PAGINA ASOCIATE */
+    .seccion-form .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    /* PAGINA TALLERES */
+    .taller {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* PAGINA PREGUNTAS */
+    .faq .pregunta {
+        width: auto;
+    }
+
+    /* PAGINA ASOCIATE */
+    .seccion-form .form-group label {
+        font-size: 14px;
+    }
+}
+
+
+
+/* MEDIAQUERYS TABLET */
+@media screen and (min-width: 600px) and (max-width:960px) {
+    /* PAGINA LIBRERIA */
+    .pagina-libreria .libro__hover {
+        transform: none;
+        justify-content: flex-end;
+    }
+
+    .pagina-libreria .contenedor {
+        grid-template-columns: repeat(2, 1fr)
+        
+    }
+
+    /* PAGINA EXPERIENCIAS */
+    .seccion-formulario form,
+    .seccion-formulario .instrucciones {
+        width: auto;
+    }
+
+
+    /* PAGINA PREGUNTAS */
+    .faq .pregunta {
+        width: auto;
+    }
+
+    
+    /* PAGINA ASOCIATE */
+    .seccion-form .form-group label {
+        font-size: 14px;
+    }
+}
+
+@import 'base/footer';
+
+
+

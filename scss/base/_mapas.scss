@@ -1,0 +1,38 @@
+$coloresExperiencias : (
+    color-experiencia-infantil : nth($list: $colores, $n:4 ),
+    color-experiencia-ficcion: nth($list: $colores, $n:3 ),
+    color-experiencia-noficcion:nth($list: $colores, $n:5 ),
+    
+);
+
+$hoversEstilos-A :(
+    transition-A: all .5s ease,
+    color-A:nth($list: $colores, $n:6 ),
+    background-color-A:nth($list: $colores, $n:2 ),
+    border-radius-A: 5px,
+    display-A: block,
+    transform-A: scale(1.1)
+);
+
+
+.experiencia-infantil {
+    background-color: map-get($coloresExperiencias ,color-experiencia-infantil );
+
+}
+
+.experiencia-ficcion {
+    background-color: map-get($coloresExperiencias ,color-experiencia-ficcion );
+}
+
+.experiencia-noficcion,
+.pagina-libreria{
+    background-color: map-get($coloresExperiencias ,color-experiencia-noficcion );
+}
+
+footer .redes a:hover,
+.libro .libro__comprar:hover,
+.libro__hover,
+.taller .btn-pdf:hover,
+#tallerInvertido .btn-pdf:hover  {
+    transition: map-get($hoversEstilos-A, transition-A)
+}

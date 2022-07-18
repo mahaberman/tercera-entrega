@@ -1,0 +1,38 @@
+.experiencias{
+    padding: 32px 0;
+
+    .contenedor{
+        margin: auto;
+        width: 90%;
+        text-align: center;
+        & article{
+            margin-bottom: 30px;
+            & img{
+                width: 100%;
+            }
+    
+            &:last-child{
+                margin-right: 0;
+            }
+
+            
+        }       
+    }
+
+    .estilo-experiencias {
+        background: linear-gradient(to right, nth($list: $colores, $n:10),nth($list: $colores, $n:9));
+        height: 40px;
+        text-align: center;
+        padding-top: 7px;
+    }
+
+    
+
+    .estilo-experiencias a {
+        color:nth($list: $colores, $n:6);
+        font-weight: bold;
+        text-decoration: none;
+        margin-top: 50px;
+    }
+}
+

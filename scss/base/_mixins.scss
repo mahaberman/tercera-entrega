@@ -1,0 +1,24 @@
+@mixin anchoDisplay ($width, $display) {
+    width: $width;
+    display: $display;
+}
+
+@mixin displayFlex ($display, $justify) {
+    display: $display;
+    justify-content: $justify;
+}
+
+@mixin enlacesFooter ($margin, $color) {
+    margin: $margin;
+    color: $color;
+}
+
+
+@mixin gridArea ($filaRow, $columnaRow, $filaColumn, $columnaColumn) {
+   grid-template-areas: $filaRow / $columnaRow / $filaColumn / $columnaColumn!important;
+}
+
+
+
+
+
